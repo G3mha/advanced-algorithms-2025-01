@@ -15,6 +15,16 @@ class Board:
         self.add_random_tile()
         self.add_random_tile()
 
+    def copy(self):
+        """
+        Returns a complete copy of the current board state
+        """
+        board_copy = Board()
+        board_copy.board = self.board.copy()
+        board_copy.score = self.score
+        return board_copy
+
+
     def add_random_tile(self):
         """
         Adds a random tile to the 2048 board.
